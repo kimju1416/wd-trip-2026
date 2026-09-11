@@ -41,9 +41,15 @@ a{color:inherit}
 /* 앱바 */
 .appbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
 .appbar .wrap{height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.appbar h1{font-size:17px;font-weight:700;letter-spacing:-.01em;line-height:1.25}
-.appbar h1 small{display:block;font-size:12px;font-weight:500;color:var(--sub);letter-spacing:0}
-.appbar .date{font-size:13px;font-weight:600;color:var(--point);white-space:nowrap}
+.appbar h1{font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.25;display:flex;align-items:center;gap:8px;min-width:0}
+.appbar h1 .ttl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.appbar .badge{flex:none;font-size:12px;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;background:var(--point);color:#fff;letter-spacing:0}
+.hero{background:var(--point);color:#fff;border-radius:var(--r2);padding:26px 20px 22px;margin-bottom:12px}
+.hero-school{font-size:15px;font-weight:700;opacity:.85;letter-spacing:.02em}
+.hero-title{font-size:36px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-top:2px}
+.hero-sub{font-size:18px;font-weight:600;margin-top:6px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.hero-meta span{font-size:13px;font-weight:600;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.18)}
 
 /* 하단 탭 */
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
@@ -214,8 +220,7 @@ table.t td:first-child,table.t th:first-child{text-align:left;padding-left:16px}
 
 <header class="appbar">
   <div class="wrap">
-    <h1>2학년 수학여행<small>원당중학교 · 교사용</small></h1>
-    <span class="date">10.1(목)–10.2(금)</span>
+    <h1><span class="ttl">원당중학교 2학년 수학여행</span><span class="badge">교사용</span></h1>
   </div>
 </header>
 
@@ -223,6 +228,12 @@ table.t td:first-child,table.t th:first-child{text-align:left;padding-left:16px}
 
 <!-- ============ 일정 ============ -->
 <section class="panel" id="p-schedule" data-tab="schedule">
+  <div class="hero">
+    <p class="hero-school">원당중학교</p>
+    <h2 class="hero-title">2학년 수학여행</h2>
+    <p class="hero-sub">인솔 교사용 안내</p>
+    <div class="hero-meta"><span>2026. 10. 1.(목) – 10. 2.(금)</span><span>1박 2일</span><span>에버랜드 · 한국민속촌</span></div>
+  </div>
   <div class="sec">
     <div class="card now" id="nowCard"></div>
     <dl class="facts">
